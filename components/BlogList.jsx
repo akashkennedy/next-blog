@@ -47,9 +47,12 @@ const BlogList = () => {
         </button>
       </div>
       <div className="flex flex-wrap justify-around gap-1 gap-y-10 mb-16 xl:mx-24">
+        {/* Filters the data from blog_data array of objects */}
         {blog_data
           .filter((item) => (menu === "All" ? true : item.category === menu))
+          //   Filters based on the condition of menu; And also the category should be same as menu state
           .map((item, index) => {
+            // Map the Filtered data as item and index as its id (It is not preferred to use index)
             return (
               <BlogItem
                 image={item.image}
