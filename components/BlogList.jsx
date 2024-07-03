@@ -59,6 +59,7 @@ const BlogList = () => {
                 description={item.description}
                 title={item.title}
                 key={index}
+                id={item.id}
               />
             );
           })}
